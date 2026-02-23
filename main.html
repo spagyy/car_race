@@ -11,7 +11,27 @@
     <style>
         body {
             background-color: black;
-            font-family: 'Press Start 2P', monospace
+            font-family: 'Press Start 2P', monospace;
+
+            height: 98vh;
+        }
+
+        .topUI{
+            position: absolute;
+            z-index: 1000;
+            transform: translate(-50%, 25px);
+            text-shadow: -2px 0 black, 2px 0 black, 2px 0 black,-2px 0 black;
+            letter-spacing: 2px;
+            color: white;
+            font-size: 17px;
+        }
+        .topUI::before{
+            display: inline-block;
+            height: 17px;
+            padding: 1px 2px;
+            line-height: 19px;
+            font-size: 17px;
+            *tady jsem skonicl
         }
     </style>
 
@@ -38,11 +58,11 @@
 <div id="controls">
     <span><span>C</span>insert coin</span>
     <span><span>M</span>mute</span>
-    <span><span>&lt</span><span>&gt</span>move</span>
-    <span><span>&lt</span><span>&gt</span>accelerate</span>
+    <span><span>&lt;</span><span>&gt;</span>move</span>
+    <span><span>&lt;</span><span>&gt;</span>accelerate</span>
 </div>
 
-    <script src="javascript¨/1.js"></script>
+    <script src="javascript/1.js"></script>
     <script src="rendered-js"></script>
 </body>
 </html>
