@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,14 +7,22 @@
     <link rel="icon" href="icon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
 </head>
-<body translate="no">
-<div id="game">
-    <div id="road">
-        <div id="cloud"></div>
-        <div id="hero"></div>
-    </div>
 
-    <div id="HUD">
+    <style>
+        body {
+            background-color: black;
+            font-family: 'Press Start 2P', monospace
+        }
+    </style>
+
+<body translate="no">
+    <div id="game">
+        <div id="road">
+            <div id="cloud"></div>
+            <div id="hero"></div>
+        </div>
+
+    <div id="hud">
         <span id="time" class="topUI">0</span>
         <span id="score" class="topUI">0</span>
         <span id="lap" class="topUI">0'00"0000</span>
@@ -23,9 +31,18 @@
     <div id="home">
         <h1>Dash</h1>
         <p id="text"></p>
-    </div>
 
-    <div id="highscore"></div>
+        <div id="highscore"></div>
+    </div>
 </div>
+<div id="controls">
+    <span><span>C</span>insert coin</span>
+    <span><span>M</span>mute</span>
+    <span><span>&lt</span><span>&gt</span>move</span>
+    <span><span>&lt</span><span>&gt</span>accelerate</span>
+</div>
+
+    <script src="javascript¨/1.js"></script>
+    <script src="rendered-js"></script>
 </body>
 </html>
