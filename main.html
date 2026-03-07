@@ -12,7 +12,7 @@
         body {
             background-color: rgba(103, 103, 103, 0.63);
             font-family: 'Press Start 2P', monospace;
-            #font-smooth:
+            <!-- font-smooth: -->
             height: 98vh;
         }
 
@@ -88,7 +88,13 @@
             overflow: hidden;
             background: #222;
             user-select: none;
+            transition: opacity 10s;
         }
+        #road{
+            transition: opacity 2s;
+            transition-timing-function: steps(8, end);
+        }
+        road * {}
     </style>
 
 <body translate="no">
