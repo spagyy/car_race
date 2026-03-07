@@ -10,9 +10,9 @@
 
     <style>
         body {
-            background-color: black;
+            background-color: rgba(103, 103, 103, 0.63);
             font-family: 'Press Start 2P', monospace;
-
+            #font-smooth:
             height: 98vh;
         }
 
@@ -31,7 +31,63 @@
             padding: 1px 2px;
             line-height: 19px;
             font-size: 17px;
-            *tady jsem skonicl
+            background : white;
+            text-shadow: none;
+            font-weight: 900;
+            letter-spacing: 0;
+            border-radius: 6px;
+            margin-right: 30px;
+            border: 3px solid rgba(19, 225, 201, 0.92);
+        }
+
+        #time{
+            left: 13%;
+            color: goldenrod;
+        }
+        #time::before{
+            content: "TIME";
+            color: #f57214;
+        }
+        #score{
+            left: 45%;
+        }
+        #score::before{
+            content: "SCORE";
+            color: #46149d;
+        }
+        #lap{
+            left: 88%;
+            width: 45%;
+        }
+        #lap::before{
+            content: "LAP";
+            color: #0082df;
+        }
+
+        #tacho{
+            position: absolute;
+            text-align: right;
+            width: 23%;
+            bottom: 5%;
+            z-index: 2000;
+            color: #e62e13;
+            text-shadow: -2px 0 black, 2px 0 black, 2px 0 black,-2px 0 black;
+            letter-spacing: 2px;
+            font-size: 23px;
+        }
+        #tacho::after{
+            content: "kh/h";
+            color: #fab453;
+            font-size: 18px;
+            margin-left: 5px;
+        }
+
+        #game{
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            background: #222;
+            user-select: none;
         }
     </style>
 
