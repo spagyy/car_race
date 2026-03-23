@@ -136,8 +136,70 @@
             color: #9e95q8;
             margin: 0 0 6px 27px;
         }
+        h1{
+            position: absolute;
+            left: 50%;
+            right: 25%;
+            transform: translate(-50%,-50%);
+            font-size: 5em;
+            background:
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        #text{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 1.2em;
+            color: #d9bbf3;
+            text-shadow: 0 0 black, 0 2px black, 2px 0 black, 0 0 black;
+        }
+        .blink{
+            animation-name: blinker 2s steps(4,end); infinite:
+
+        }
+        @keyframes blinker {
+            50%{
+                opacity: 0;
+            }
+        }
+
+        #controls{
+            color: #868686;
+            font-size: 13px;
+            line-height: 13px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        #controls > span{
+            margin-left: 20px;
+
+        }
+
+        #controls > span > span{
+            border: 2px solid #868686;
+            border-radius: 5px;
+            padding: 7px;
+            margin-right: 10px;
+            display: inline-block;
+        }
+        #controls >span:last-child >span{
+            transform: rotate(90deg);
+        }
     </style>
 
+<script>
+    window.console = Window.console ||
+        function (t){};
+</script>
+
+<script>
+    if(document.locatiom.search.match(/type=embed/gi )){
+        window.parent.postMessage("resize", "*");
+    }
+</script>
 <body translate="no">
     <div id="game">
         <div id="road">
@@ -166,6 +228,19 @@
 </div>
 
     <script src="javascript/1.js"></script>
-    <script src="rendered-js"></script>
+    <script src="rendered-js">
+        const ASSETS = {
+            COLOR:{
+                TAR: ["#959298", "#9c9a9d"],
+                RUMBLE: ["#959298", "#f5f2f6"],
+                GRASS: ["#eedccd", "#e6d4c5"],
+            },
+          IMAGE:{},
+          HERO:{},
+          CAR:{},
+          FINISH:{},
+          SKY:{}
+        }
+    </script>
 </body>
 </html>
