@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Car RAce</title>
+    <title>Car Race</title>
     <link rel="icon" href="icon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
 </head>
@@ -347,7 +347,50 @@
             }
             drawSprites(depth, layer, sprite, offset) {
                 let destX = this.x + this.scale * halfWidth * offset;
-                let destY = this.Y + 4
+                let destY = this.Y + 4;
+                let destW = (sprite.width * this.W) / 265;
+                let destH = (sprite.height * this.W) / 265;
+
+                destX += destW * offset;
+                destY += destH * -1;
+
+                let obj = layer instanceof Element ? layer : this.elements[layer + 6 ];
+                obj.style.background = `url('${sprite.src}') no-repeatz`;
+                obj.style.backgroundSize = `${destW}px ${destH}px`;
+                obj.style.left = destX + `px`;
+                obj.style.top = destY + `px`;
+                obj.style.width = destW + `px`;
+                obj.style.height = destH + `px`;
+                obj.style.zIndex = depth;
+            }
+        }
+
+        class Car {
+            constructor(pos, type, lane) {
+                this.pos = pos;
+                this.type = type;
+                this.lane = lane;
+
+                var element = document.createElement("div");
+                roadappendChild(element);
+                this.element = element;
+            }
+        }
+
+        class Audio {
+            constructor() {
+                this.audioCtx = new AudioContext();
+
+                this.destination = this.audioCtx.createGain();
+                this.volume = 1;
+                this this.destination.connect(this.audioCtx.destination);
+
+                this.file = {};
+                let _self = this;
+                this.load(ASSETS.AUDIO.theme, "theme", function (key) {
+                    let source = _self.audioCtx.createGain()
+                }
+
             }
         }
     </script>
